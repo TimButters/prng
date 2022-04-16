@@ -14,7 +14,3 @@ class MiddleSquare(RandomBase):
         skip = (len(square) - self.digits) // 2
         self.current_number = int(square[skip: skip + self.digits])
         return self.current_number
-
-    def random_list(self, N=10):
-        """Return a list of random numbers"""
-        return [self.random() for i in range(N)]
