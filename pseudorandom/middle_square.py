@@ -1,5 +1,5 @@
 """Pseudo-Random Number Generation"""
-from base import RandomBase, RandomIterator
+from .base import RandomBase
 
 
 class MiddleSquare(RandomBase):
