@@ -1,6 +1,17 @@
+import numpy as np
 import matplotlib.pyplot as plt
 
 from pseudorandom import MiddleSquare, LinConGen
+
+
+def spectral_test(prng, *, num_points=1000, dim=3):
+    numbers = prng.random_list(num_points * dim)
+    points = np.array(numbers).reshape(-1, dim)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(projection="3d")
+    ax.scatter(points[:, 0], points[:, 1], points[:, 2], marker="o")
+    return points
 
 
 if __name__ == "__main__":
