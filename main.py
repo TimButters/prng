@@ -1,5 +1,4 @@
 import math
-import scipy as spc
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -37,7 +36,7 @@ def monobit_test(number):
         raise ValueError("Input must be an int or list of ints.")
 
     bit_length = len(binary)
-    total = 2*sum(binary) - bit_length
+    total = 2 * sum(binary) - bit_length
     sobs = total / math.sqrt(bit_length)
     return math.erfc(math.fabs(sobs) / math.sqrt(2))
 
@@ -53,4 +52,8 @@ if __name__ == "__main__":
     for ax in axs:
         ax.legend(loc=1)
         ax.set_xlabel("Iteration")
+
+    spectral_test(LinConGen(a=65539, c=0, m=2**31))
+    spectral_test(MiddleSquare())
+
     plt.show()
