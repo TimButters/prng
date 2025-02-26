@@ -53,7 +53,7 @@ if __name__ == "__main__":
         ax.legend(loc=1)
         ax.set_xlabel("Iteration")
 
+    # RANDU
     spectral_test(LinConGen(a=65539, c=0, m=2**31))
-    spectral_test(MiddleSquare())
 
     plt.show()
